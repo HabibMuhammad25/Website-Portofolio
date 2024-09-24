@@ -311,7 +311,7 @@ body{
 }
 .contact-details i{
     font-size: 1.5rem;
-    color: #fca61f;
+    color: #48f32d;
 }
 .contact-details p{
     font-size: 1.2rem;
@@ -319,7 +319,7 @@ body{
 }
 .contact-form .form-control:focus{
     box-shadow: none;
-    border: 1px solid #fca61f;
+    border: 1px solid #48f32d;
 }
 .contact-form .form-control{
     padding: 10px 10px;
