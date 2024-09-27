@@ -2,8 +2,21 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
 }
+
+.container-fluid {
+    max-width: 1200px; /* Sesuaikan dengan kebutuhan */
+    margin: 0 auto; /* Memusatkan konten */
+}
+
 /* styling menu icon */
+@media (max-width: 768px) {
+    .navbar-nav {
+        font-size: 0.9rem; /* Mengurangi ukuran font di layar kecil */
+    }
+}
+
 .nav-menu{
     border: none;
     background-color: #fff;
@@ -55,6 +68,10 @@ body{
     color: #6f34fe;
     font-weight: 700;
     font-size: 4rem;
+}
+.home img {
+    max-width: 100%; /* Gambar responsif */
+    height: auto; /* Mempertahankan rasio aspek */
 }
 .home p{
     width: fit-content;
