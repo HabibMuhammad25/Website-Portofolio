@@ -3,11 +3,19 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     overflow-x: hidden; /* Mencegah scroll horizontal */
+    margin: 0;
+    padding: 0;
 }
 
 .container-fluid {
     max-width: 1200px; /* Sesuaikan dengan kebutuhan */
     margin: 0 auto; /* Memusatkan konten */
+    padding: 0; /* Tambahkan ini jika perlu */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* styling menu icon */
@@ -15,6 +23,13 @@ body{
     .navbar-nav {
         font-size: 0.9rem; /* Mengurangi ukuran font di layar kecil */
     }
+    .some-element {
+        width: 100%; /* Pastikan elemen ini responsif */
+    }
+}
+
+.some-element {
+    width: 100%; /* Atau max-width: 100%; */
 }
 
 .nav-menu{
@@ -64,14 +79,14 @@ body{
     font-size: 3rem;
     line-height: 4rem;
 }
+.home img {
+    max-width: 100%; /* Gambar responsif */
+    height: auto; /* Mempertahankan rasio aspek */
+}
 .c-orange{
     color: #6f34fe;
     font-weight: 700;
     font-size: 4rem;
-}
-.home img {
-    max-width: 100%; /* Gambar responsif */
-    height: auto; /* Mempertahankan rasio aspek */
 }
 .home p{
     width: fit-content;
