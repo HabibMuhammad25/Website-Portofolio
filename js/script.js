@@ -4,7 +4,7 @@ let htmlProgress = document.querySelector(".html-css"),
 
 let htmlStartValue = 0,
   htmlEndValue = 85,
-  htmlspeed = 30;
+  htmlspeed = 130;
 
 let progresshtml = setInterval(() => {
   htmlStartValue++;
@@ -25,7 +25,7 @@ let javascriptProgress = document.querySelector(".javascript"),
 
 let javascriptStartValue = 0,
   javascriptEndValue = 80,
-  jsspeed = 30;
+  jsspeed = 130;
 
 let progressjs = setInterval(() => {
   javascriptStartValue++;
@@ -46,7 +46,7 @@ let phpProgress = document.querySelector(".php"),
 
 let phpStartValue = 0,
   phpEndValue = 70,
-  phpspeed = 30;
+  phpspeed = 130;
 
 let progressphp = setInterval(() => {
   phpStartValue++;
@@ -67,7 +67,7 @@ let reactProgress = document.querySelector(".reactjs"),
 
 let reactStartValue = 0,
   reactEndValue = 30,
-  rjsspeed = 30;
+  rjsspeed = 250;
 
 let progressreact = setInterval(() => {
   reactStartValue++;
