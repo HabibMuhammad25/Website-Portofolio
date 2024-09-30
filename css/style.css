@@ -13,10 +13,16 @@ body{
     padding: 0; /* Tambahkan ini jika perlu */
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+.carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #fca61f; /* Warna kuning */
+      border-radius: 50%; /* Agar lebih bulat */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      filter: invert(0); /* Menghapus efek invert */
+    }
 
 /* styling menu icon */
 @media (max-width: 768px) {
@@ -79,10 +85,7 @@ img {
     font-size: 3rem;
     line-height: 4rem;
 }
-.home img {
-    max-width: 100%; /* Gambar responsif */
-    height: auto; /* Mempertahankan rasio aspek */
-}
+
 .c-orange{
     color: #6f34fe;
     font-weight: 700;
