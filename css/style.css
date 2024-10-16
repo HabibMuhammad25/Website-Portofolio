@@ -31,6 +31,7 @@ body {
     /* Menghapus efek invert */
 }
 
+
 /* styling menu icon */
 @media (max-width: 768px) {
     .navbar-nav {
@@ -92,6 +93,23 @@ body {
     background: #fca61f;
     color: #fff;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.c-btn:hover {
+    background-color: #6f34fe;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* styling home section starts */
@@ -224,50 +242,137 @@ body {
 .progress-card:hover {
     transform: scale(1.1, 1.1);
     transition-duration: 0.6s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.progress-card::before, .progress-card::after {
+.progress-card::before,
+.progress-card::after {
     content: '';
     position: absolute;
-    width: 8px; /* Ketebalan garis */
-    height: 100%; /* Panjang garis sesuai dengan tinggi kartu */
-    background: linear-gradient(90deg, #fca61f, #7d2ae8, #20c997, #3f396d);
+    width: 6px;
+    /* Ketebalan garis */
+    height: 100%;
+    /* Panjang garis sesuai dengan tinggi kartu */
+    /* background: linear-gradient(90deg, #fca61f, #7d2ae8, #20c997, #3f396d); */
+    background: linear-gradient(to bottom,
+            #ff0000,
+            /* Merah */
+            #ffcc00,
+            /* Kuning */
+            #00ff00,
+            /* Hijau */
+            #007bff
+            /* Biru */
+        );
     animation: snakeAnimation 4s linear infinite;
 }
 
 .progress-card::before {
-    left: 0; /* Sisi kiri */
-    animation-delay: 0s; /* Gerakan pertama */
+    left: 0;
+    /* Sisi kiri */
+    animation-delay: 0s;
+    /* Gerakan pertama */
 }
 
 .progress-card::after {
-    right: 0; /* Sisi kanan */
-    animation-delay: 2s; /* Gerakan kedua setelah jeda */
+    right: 0;
+    /* Sisi kanan */
+    animation-delay: 2s;
+    /* Gerakan kedua setelah jeda */
 }
 
 @keyframes snakeAnimation {
     0% {
-        top: 0; /* Mulai dari atas */
+        top: 0;
+        /* Mulai dari atas */
     }
+
     25% {
-        bottom: 0; 
-        bottom: 100%; /* Pergi ke kanan */
+        bottom: 0;
+        bottom: 100%;
+        /* Pergi ke kanan */
     }
+
     50% {
-        top: 100%; /* Turun ke bawah */
-        bottom: 100%; 
+        top: 100%;
+        /* Turun ke bawah */
+        bottom: 100%;
     }
+
     75% {
-        bottom: 100%; 
-        bottom: 0; /* Kembali ke kiri */
+        bottom: 100%;
+        bottom: 0;
+        /* Kembali ke kiri */
     }
+
     100% {
-        top: 0; /* Kembali ke atas */
-        bottom: 0; /* Selesai di posisi awal */
+        top: 0;
+        /* Kembali ke atas */
+        bottom: 0;
+        /* Selesai di posisi awal */
     }
 }
 
+.reverse-animation::before,
+.reverse-animation::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    /* Ketebalan garis */
+    height: 100%;
+    /* Panjang garis sesuai dengan tinggi kartu */
+    background: linear-gradient(to bottom,
+            #007bff
+            /* Biru */
+            #00ff00,
+            /* Hijau */
+            #ff0000,
+            /* Merah */
+            #ffcc00,
+            /* Kuning */
+        );
+    animation: reverseSnakeAnimation 4s linear infinite;
+}
 
+.reverse-animation::before {
+    left: 0;
+    /* Sisi kiri */
+    animation-delay: 2s;
+    /* Gerakan pertama */
+}
+
+.reverse-animation::after {
+    right: 0;
+    /* Sisi kanan */
+    animation-delay: 0s;
+    /* Gerakan kedua setelah jeda */
+}
+
+@keyframes reverseSnakeAnimation {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        /* top: 0;  */
+        /* top: 100%; */
+    }
+
+    50% {
+        bottom: 100%;
+        /* top: 100%;  */
+    }
+
+    75% {
+        /* top: 100%;  */
+        /* top: 0; */
+    }
+
+    100% {
+        bottom: 0;
+        /* top: 0; */
+    }
+}
 
 .circular-progress {
     position: relative;
@@ -278,6 +383,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.5s ease;
 }
 
 .circular-progress::before {
@@ -369,10 +475,30 @@ body {
 
 }
 
+.testimonial p:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.testimonial h4:hover {
+    color: #6f34fe;
+    transition: color 0.3s;
+}
+
+.testimonial i {
+    transition: transform 0.5s;
+}
+
+.testimonial:hover i {
+    transform: rotate(360deg);
+}
+
+
 .testimonial .nextprev-btn {
     border: none;
     background-color: #fff;
 }
+
 
 .prev:hover,
 .prev-btn:hover {
@@ -391,6 +517,64 @@ body {
 /* blog section starts */
 .blog {
     background-color: #f2f2ff;
+    background: linear-gradient(to right, #cdda24, #e6e6ff);
+    position: relative; /* Tambahkan posisi relatif untuk parent */
+    overflow: hidden; /* Agar meteor tidak keluar dari area blog */
+}
+
+.meteor {
+    position: absolute;
+    width: 20px; /* Ukuran meteor */
+    height: 20px; /* Ukuran meteor */
+    background: radial-gradient(circle, #fff, #fca61f); /* Warna meteor */
+    border-radius: 50%; /* Bentuk bulat */
+    animation: fall 5s linear infinite; /* Animasi jatuh */
+}
+
+.meteor:nth-child(1) {
+    left: 10%;
+    animation-duration: 4s;
+}
+
+.meteor:nth-child(2) {
+    left: 40%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.meteor:nth-child(3) {
+    left: 70%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.meteor:nth-child(4) {
+    left: 30%;
+    animation-duration: 7s;
+    animation-delay: 3s;
+}
+
+.meteor:nth-child(5) {
+    left: 50%;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+.meteor:nth-child(6) {
+    left: 80%;
+    animation-duration: 9s;
+    animation-delay: 5s;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%; /* Mulai di atas */
+        transform: translateX(0); /* Tidak ada gerakan horizontal */
+    }
+    100% {
+        top: 100%; /* Bergerak ke bawah */
+        transform: translateX(20px); /* Gerakan horizontal ke kanan */
+    }
 }
 
 .blog .blogpost .card {
@@ -444,10 +628,18 @@ body {
     font-weight: 700;
     margin-top: 1rem;
     text-decoration: none;
+    font-size: 1.25rem;
+    /* Membuat lebih besar */
+    margin-top: 1rem;
 }
 
 .blogpost a:hover {
     color: #fca61f;
+}
+
+.blog .blogpost small {
+    font-size: 1rem;
+    /* Ukuran font lebih besar */
 }
 
 .blog .blogpost .read-more-btn {
@@ -455,6 +647,13 @@ body {
     color: #fca61f;
     font-size: 1.1rem;
 }
+
+.blog .blogpost .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 
 .blog .blogpost .read-more-btn:hover {
     color: #6f34fe;
@@ -486,6 +685,8 @@ body {
 /* contact section starts */
 .contact {
     background-color: #f3f3f3;
+    position: relative;
+    overflow: hidden;
 }
 
 .contact-details i {
@@ -498,15 +699,26 @@ body {
     margin-left: 1rem;
 }
 
+.contact-details .row {
+    animation: fadeInUp 0.5s forwards;
+}
+
 .contact-form .form-control:focus {
     box-shadow: none;
     border: 1px solid #48f32d;
+    transition: border-color 0.3s ease;
 }
 
 .contact-form .form-control {
     padding: 10px 10px;
     width: 80%;
+    transition: transform 0.3s ease;
 }
+
+.contact-form .form-control:hover {
+    transform: translateY(-2px);
+}
+
 
 /* footer section starts */
 footer {
