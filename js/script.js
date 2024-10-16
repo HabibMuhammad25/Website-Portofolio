@@ -12,7 +12,7 @@ let progresshtml = setInterval(() => {
   htmlValue.textContent = `${htmlStartValue}%`;
   htmlProgress.style.background = `conic-gradient(#fca61f ${
     htmlStartValue * 3.6
-  }deg, #ededed 0deg)`;
+  }deg, #F1DEDEFF 0deg)`;
 
   if (htmlStartValue == htmlEndValue) {
     clearInterval(progresshtml);
@@ -33,7 +33,7 @@ let progressjs = setInterval(() => {
   javascriptValue.textContent = `${javascriptStartValue}%`;
   javascriptProgress.style.background = `conic-gradient(#7d2ae8 ${
     javascriptStartValue * 3.6
-  }deg, #ededed 0deg)`;
+  }deg, #DCC4ECFF 0deg)`;
 
   if (javascriptStartValue == javascriptEndValue) {
     clearInterval(progressjs);
@@ -54,7 +54,7 @@ let progressphp = setInterval(() => {
   phpValue.textContent = `${phpStartValue}%`;
   phpProgress.style.background = `conic-gradient(#20c997 ${
     phpStartValue * 3.6
-  }deg, #ededed 0deg)`;
+  }deg, #CDEDC4FF 0deg)`;
 
   if (phpStartValue == phpEndValue) {
     clearInterval(progressphp);
@@ -75,7 +75,7 @@ let progressreact = setInterval(() => {
   reactValue.textContent = `${reactStartValue}%`;
   reactProgress.style.background = `conic-gradient(#3f396d ${
     reactStartValue * 3.6
-  }deg, #ededed 0deg)`;
+  }deg, #BCC5EDFF 0deg)`;
 
   if (reactStartValue == reactEndValue) {
     clearInterval(progressreact);
