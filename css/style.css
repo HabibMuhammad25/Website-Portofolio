@@ -106,6 +106,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -116,6 +117,12 @@ body {
 .home {
     background: linear-gradient(33deg, rgba(242, 242, 255, 1) 0%, rgba(235, 249, 255, 1) 100%);
     padding: 30px 0px 10px 0px;
+    /* position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center; */
 }
 
 .home h2 {
@@ -129,11 +136,45 @@ body {
     font-size: 4rem;
 }
 
+/* Ini Jalan kata katanya */
 .home p {
     width: fit-content;
     margin-top: 1rem;
     font-size: 1.2rem;
 }
+
+/* Ini Jalan kata katanya */
+.home .content {
+    flex: 1 1 40rem;
+    padding-top: 0rem;
+    z-index: 1;
+}
+
+.home .content p {
+    font-size: 2.0rem;
+    color: #000;
+    font-weight: 500;
+    padding: 1rem 0;
+}
+
+.home .content p span {
+    font-size: 2.5rem;
+    color: rgb(204, 9, 9);
+    font-weight: 600;
+    padding: 0rem 0;
+}
+
+/* hero media queries starts*/
+@media (max-width: 450px) {
+    .home .content p {
+        font-size: 2.2rem;
+    }
+
+    .home .content p span {
+        font-size: 2.2rem;
+    }
+}
+/* END Ini Jalan kata katanya */
 
 .h-btn:hover {
     background: #6f34fe;
@@ -518,17 +559,24 @@ body {
 .blog {
     background-color: #f2f2ff;
     background: linear-gradient(to right, #cdda24, #e6e6ff);
-    position: relative; /* Tambahkan posisi relatif untuk parent */
-    overflow: hidden; /* Agar meteor tidak keluar dari area blog */
+    position: relative;
+    /* Tambahkan posisi relatif untuk parent */
+    overflow: hidden;
+    /* Agar meteor tidak keluar dari area blog */
 }
 
 .meteor {
     position: absolute;
-    width: 20px; /* Ukuran meteor */
-    height: 20px; /* Ukuran meteor */
-    background: radial-gradient(circle, #fff, #fca61f); /* Warna meteor */
-    border-radius: 50%; /* Bentuk bulat */
-    animation: fall 5s linear infinite; /* Animasi jatuh */
+    width: 20px;
+    /* Ukuran meteor */
+    height: 20px;
+    /* Ukuran meteor */
+    background: radial-gradient(circle, #fff, #fca61f);
+    /* Warna meteor */
+    border-radius: 50%;
+    /* Bentuk bulat */
+    animation: fall 5s linear infinite;
+    /* Animasi jatuh */
 }
 
 .meteor:nth-child(1) {
@@ -568,12 +616,17 @@ body {
 
 @keyframes fall {
     0% {
-        top: -10%; /* Mulai di atas */
-        transform: translateX(0); /* Tidak ada gerakan horizontal */
+        top: -10%;
+        /* Mulai di atas */
+        transform: translateX(0);
+        /* Tidak ada gerakan horizontal */
     }
+
     100% {
-        top: 100%; /* Bergerak ke bawah */
-        transform: translateX(20px); /* Gerakan horizontal ke kanan */
+        top: 100%;
+        /* Bergerak ke bawah */
+        transform: translateX(20px);
+        /* Gerakan horizontal ke kanan */
     }
 }
 
