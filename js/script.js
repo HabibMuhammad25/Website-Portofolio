@@ -59,11 +59,11 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
   function () {
       if (document.visibilityState === "visible") {
-          document.title = "Portfolio | CodeWithTanveer";
+          document.title = "Portfolio | Muhammad Habib";
           $("#favicon").attr("href", "assets/images/favicon.jpg");
       }
       else {
-          document.title = "Portfolio | Tanveer Ahmad";
+          document.title = "Portfolio | Muhammad Habib";
           $("#favicon").attr("href", "assets/images/favicon.jpg");
       }
   });
@@ -392,4 +392,3 @@ mybutton.addEventListener("click",function(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
-
