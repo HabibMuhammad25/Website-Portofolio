@@ -136,7 +136,6 @@ body {
     font-size: 4rem;
 }
 
-/* Ini Jalan kata katanya */
 .home p {
     width: fit-content;
     margin-top: 1rem;
@@ -164,7 +163,6 @@ body {
     padding: 0rem 0;
 }
 
-/* hero media queries starts*/
 @media (max-width: 450px) {
     .home .content p {
         font-size: 2.2rem;
@@ -173,6 +171,368 @@ body {
     .home .content p span {
         font-size: 2.2rem;
     }
+}
+
+.Baloo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+    /* font: 8em "Baloo", cursive; */
+    /* text-transform: uppercase; */
+    /* letter-spacing: 0.1em; */
+    color: #6f34fe;
+    animation: anim 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes anim {
+    0% {
+        text-shadow: -3px -3px 0px #efba66;
+    }
+
+    10% {
+        text-shadow: 3px -4px 0px #fca61f;
+    }
+
+    20% {
+        text-shadow: -3px 4px 0px #fca61f;
+    }
+
+    30% {
+        text-shadow: 3px -4px 0px #fca61f;
+    }
+
+    40% {
+        text-shadow: -4px 3px 0px #fca61f;
+    }
+
+    50% {
+        text-shadow: 3px 4px 0px #fca61f;
+    }
+
+    60% {
+        text-shadow: -4px 3px 0px #fca61f;
+    }
+
+    70% {
+        text-shadow: 3px 4px 0px #fca61f;
+    }
+
+    80% {
+        text-shadow: -3px -3px 0px #fca61f;
+    }
+
+    90% {
+        text-shadow: 3px -4px 0px #fca61f;
+    }
+
+    100% {
+        text-shadow: -4px 3px 0px #fca61f;
+    }
+}
+
+.animate-charcter {
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    /* font-size: 50px; */
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Bagian umum */
+.skills {
+    padding: 50px 0;
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section__subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Container untuk skill */
+.skills__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Konten skill */
+.skills__content {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills__content:hover {
+    transform: scale(1.05); /* Memperbesar sedikit */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Memberikan bayangan yang lebih besar */
+}
+
+/* Header skill */
+.skills__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.skills__icon {
+    font-size: 2rem;
+    color: #333;
+}
+
+.skills__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* Tombol buka/tutup */
+.skills__toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+/* Gambar panah */
+.skills__arrow {
+    width: 24px;  /* Atur ukuran gambar panah */
+    height: 24px;
+    transition: transform 0.3s ease; /* Tambahkan transisi untuk rotasi */
+}
+
+/* Menambahkan efek rotasi saat membuka daftar */
+.skills__open .skills__arrow {
+    transform: rotate(180deg);
+}
+
+/* Daftar skill */
+.skills__list {
+    display: none; /* Default, daftar tersembunyi */
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+/* Menambahkan animasi untuk gambar dan teks saat muncul */
+.skills__data {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Style umum untuk ikon gambar di samping teks */
+.skills__icon-img {
+    width: 20px; /* Ukuran gambar */
+    height: 20px; /* Menjaga proporsi gambar */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+    vertical-align: middle; /* Menjaga posisi gambar sejajar dengan teks */
+}
+
+/* Style untuk gambar ikon di sebelah kanan */
+.skills__icon-img-right {
+    width: 20px; /* Ukuran gambar */
+    height: 20px;
+    margin-left: 10px; /* Jarak antara teks dan gambar */
+    vertical-align: middle; /* Menjaga gambar sejajar dengan teks */
+}
+
+.skills__name {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Menampilkan daftar skill ketika panel dibuka */
+.skills__open .skills__list {
+    display: block;
+}
+
+/* Responsif: satu kolom di layar kecil */
+@media (max-width: 768px) {
+    .skills__container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Styling untuk soft skills */
+.soft-skills__content {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.soft-skills__title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.soft-skills__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.soft-skills__data {
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px); /* Menggerakkan sedikit ke bawah */
+    animation: fadeInUp 0.5s ease-out forwards; /* Animasi fadeInUp */
+    animation-delay: 0.2s; /* Menunda animasi untuk masing-masing item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk perubahan */
+}
+
+/* Memberikan jeda animasi pada setiap item di Soft Skills */
+.soft-skills__data:nth-child(1) {
+    animation-delay: 2s;
+}
+.soft-skills__data:nth-child(2) {
+    animation-delay: 2.5s;
+}
+.soft-skills__data:nth-child(3) {
+    animation-delay: 3s;
+}
+.soft-skills__data:nth-child(4) {
+    animation-delay: 3.5s;
+}
+.soft-skills__data:nth-child(5) {
+    animation-delay: 4s;
+}
+.soft-skills__data:nth-child(6) {
+    animation-delay: 4.5s;
+}
+.soft-skills__data:nth-child(7) {
+    animation-delay: 5s;
+}
+
+.soft-skills__data:hover {
+    transform: translateY(-5px) scale(1.05); /* Memberikan efek sedikit naik dan memperbesar item */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambah bayangan saat hover */
+}
+
+
+/* Sub-list di awal tersembunyi, kemudian muncul dengan efek */
+.skills__sub-list {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px); /* Menggeser sub-list ke bawah */
+    animation: fadeInUp 0.5s ease-out forwards;
+    margin-left: 20px; /* Memberi jarak kiri pada sub-list */
+}
+
+/* Gaya untuk bullet point biru untuk sub-skill */
+.skills__sub-icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #007BFF; /* Warna biru */
+    border-radius: 50%; /* Membuat bulatan */
+    margin-right: 10px; /* Memberikan jarak dengan teks */
+    vertical-align: middle; /* Menjaga posisi bullet sejajar dengan teks */
+}
+
+.skills__open .skills__sub-list {
+    display: block;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Keyframe animasi fade-in untuk sub-list */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Style untuk nama sub-skill */
+.skills__sub-list .skills__data {
+    margin-bottom: 5px;
+    padding-left: 10px; /* Memberikan jarak lebih pada sub-skill */
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Menambahkan gaya untuk tombol buka/tutup */
+.skills__toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Ikon panah untuk toggle */
+.skills__arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.skills__open .skills__arrow {
+    transform: rotate(180deg);
+}
+
+/* Animasi untuk setiap skill saat muncul */
+.skills__data {
+    opacity: 0;
+    transform: translateY(20px); /* Menggeser skill ke bawah */
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Memberikan efek animasi dengan delay pada setiap item */
+.skills__list .skills__data:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.skills__list .skills__data:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.skills__list .skills__data:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.skills__list .skills__data:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.skills__list .skills__data:nth-child(5) {
+    animation-delay: 0.5s;
 }
 /* END Ini Jalan kata katanya */
 
